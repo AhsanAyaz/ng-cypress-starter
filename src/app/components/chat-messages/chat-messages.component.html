@@ -1,0 +1,18 @@
+<div class="messages-list" #messagesList>
+  <div
+    *ngFor="let message of messages"
+    class="message-item"
+    (click)="goToMessage(message)"
+  >
+    <div class="from-user">
+      <img [src]="message.userImage" />
+    </div>
+    <div class="message-text">{{ message.text }}</div>
+    <div
+      class="delete-btn btn btn-sm btn-danger"
+      (click)="removeMessage(message, $event)"
+    >
+      x
+    </div>
+  </div>
+</div>

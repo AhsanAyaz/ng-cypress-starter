@@ -1,0 +1,5 @@
+<app-chat-messages
+  (messageDeleted)="deleteMessage($event)"
+  [messages]="chatMessages$ | async"
+></app-chat-messages>
+<app-write-message (onMessageSent)="newMessageSent($event)"></app-write-message>
